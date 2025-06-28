@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="" label="doctor" language="en" table="u_doctor">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>doctor</label>
+            <language>en</language>
+            <name>u_doctor</name>
+            <plural>doctors</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-06-28 10:31:41</sys_created_on>
+            <sys_id>0a0ec35bc3d622107a9976d4e4013161</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>doctor</sys_name>
+            <sys_package display_value="Healthcare Management" source="78b166dfc3d222107a9976d4e401315a">78b166dfc3d222107a9976d4e401315a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Healthcare Management">78b166dfc3d222107a9976d4e401315a</sys_scope>
+            <sys_update_name>sys_documentation_u_doctor__en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-06-28 10:31:41</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

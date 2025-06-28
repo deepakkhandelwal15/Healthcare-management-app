@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_date_of_birth" label="Date Of Birth" language="en" table="u_patient_record">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_date_of_birth</element>
+            <help/>
+            <hint/>
+            <label>Date Of Birth</label>
+            <language>en</language>
+            <name>u_patient_record</name>
+            <plural>Date Of Births</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-06-28 10:12:46</sys_created_on>
+            <sys_id>b4b94fd3c3d622107a9976d4e401316c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Date Of Birth</sys_name>
+            <sys_package display_value="Healthcare Management" source="78b166dfc3d222107a9976d4e401315a">78b166dfc3d222107a9976d4e401315a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Healthcare Management">78b166dfc3d222107a9976d4e401315a</sys_scope>
+            <sys_update_name>sys_documentation_u_patient_record_u_date_of_birth_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-06-28 10:12:46</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

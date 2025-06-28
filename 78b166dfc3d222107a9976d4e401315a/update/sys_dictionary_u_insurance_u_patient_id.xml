@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="u_prescribing_doctor" table="u_medication">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="u_patient_id" table="u_insurance">
         <active>true</active>
         <array>false</array>
         <attributes>encode_utf8=false</attributes>
@@ -8,7 +8,7 @@
         <choice>0</choice>
         <choice_field/>
         <choice_table/>
-        <column_label>Prescribing Doctor</column_label>
+        <column_label>Patient Id</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -21,7 +21,7 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>u_prescribing_doctor</element>
+        <element>u_patient_id</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <formula/>
@@ -30,12 +30,12 @@
         <internal_type display_value="Reference">reference</internal_type>
         <mandatory>true</mandatory>
         <max_length>32</max_length>
-        <name>u_medication</name>
+        <name>u_insurance</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
-        <reference display_value="" name="u_doctor">u_doctor</reference>
+        <reference display_value="" name="u_patient_record">u_patient_record</reference>
         <reference_cascade_rule/>
         <reference_floats>false</reference_floats>
         <reference_key/>
@@ -46,15 +46,15 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-06-28 10:30:46</sys_created_on>
-        <sys_id>e0dd4f1bc3d622107a9976d4e4013197</sys_id>
-        <sys_name>Prescribing Doctor</sys_name>
+        <sys_created_on>2025-06-28 11:23:35</sys_created_on>
+        <sys_id>92e9135bc31a22107a9976d4e40131ad</sys_id>
+        <sys_name>Patient Id</sys_name>
         <sys_package display_value="Healthcare Management" source="78b166dfc3d222107a9976d4e401315a">78b166dfc3d222107a9976d4e401315a</sys_package>
         <sys_policy/>
         <sys_scope display_value="Healthcare Management">78b166dfc3d222107a9976d4e401315a</sys_scope>
-        <sys_update_name>sys_dictionary_u_medication_u_prescribing_doctor</sys_update_name>
+        <sys_update_name>sys_dictionary_u_insurance_u_patient_id</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-06-28 11:28:04</sys_updated_on>
+        <sys_updated_on>2025-06-28 11:23:36</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

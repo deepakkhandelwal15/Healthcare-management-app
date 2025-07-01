@@ -6,7 +6,6 @@
             <sys_class_name>sys_choice_set</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2025-06-28 10:12:47</sys_created_on>
-            <sys_id>55b94fd3c3d622107a9976d4e40131c4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>u_gender</sys_name>
             <sys_package display_value="Healthcare Management" source="78b166dfc3d222107a9976d4e401315a">78b166dfc3d222107a9976d4e401315a</sys_package>
@@ -30,7 +29,6 @@
             <sys_created_on>2025-06-28 10:12:47</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>11b94fd3c3d622107a9976d4e40131c4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2025-06-28 10:12:47</sys_updated_on>
@@ -50,7 +48,6 @@
             <sys_created_on>2025-06-28 10:12:47</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>59b94fd3c3d622107a9976d4e40131c5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2025-06-28 10:12:47</sys_updated_on>
@@ -70,7 +67,6 @@
             <sys_created_on>2025-06-28 10:12:47</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>95b94fd3c3d622107a9976d4e40131c6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2025-06-28 10:12:47</sys_updated_on>

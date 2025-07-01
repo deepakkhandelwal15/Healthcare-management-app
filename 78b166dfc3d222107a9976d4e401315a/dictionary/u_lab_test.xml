@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="662db217c39622107a9976d4e4013120" extends="task" label="Lab Test" max_length="40" name="u_lab_test" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="work notes" mandatory="true" max_length="4000" name="u_work_notes" type="journal"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Test Type" mandatory="true" max_length="40" name="u_test_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="X-Ray" sequence="2" value="x-ray"/>
+                <element inactive_on_update="false" label="Blood Test" sequence="0" value="blood test"/>
+                <element inactive_on_update="false" label="Urine Test" sequence="1" value="urine test"/>
+                <element inactive_on_update="false" label="MRI" sequence="3" value="mri"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="scheduled Date" mandatory="true" max_length="40" name="u_scheduled_date" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="status" mandatory="true" max_length="40" name="u_status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Cancelled" sequence="2" value="cancelled"/>
+                <element inactive_on_update="false" label="Schedule" sequence="0" value="schedule"/>
+                <element inactive_on_update="false" label="Completed" sequence="1" value="completed"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="Patient Id" mandatory="true" max_length="32" name="u_patient_id" reference="u_patient_record" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Results" mandatory="true" max_length="1000" name="u_results" type="string"/>
+    </element>
+</database>

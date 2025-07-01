@@ -52,7 +52,6 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-06-28 10:52:22</sys_created_on>
-        <sys_id>cdc217dfc3d622107a9976d4e401310e</sys_id>
         <sys_name>Ward Id</sys_name>
         <sys_package display_value="Healthcare Management" source="78b166dfc3d222107a9976d4e401315a">78b166dfc3d222107a9976d4e401315a</sys_package>
         <sys_policy/>

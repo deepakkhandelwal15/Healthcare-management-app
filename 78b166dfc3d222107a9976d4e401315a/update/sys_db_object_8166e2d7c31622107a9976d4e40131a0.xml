@@ -13,7 +13,7 @@
         <label>Patient Record</label>
         <live_feed_enabled>false</live_feed_enabled>
         <name>u_patient_record</name>
-        <number_ref/>
+        <number_ref display_value="PAT">5f492a1bc31622107a9976d4e4013145</number_ref>
         <provider_class/>
         <read_access>true</read_access>
         <scriptable_table>false</scriptable_table>

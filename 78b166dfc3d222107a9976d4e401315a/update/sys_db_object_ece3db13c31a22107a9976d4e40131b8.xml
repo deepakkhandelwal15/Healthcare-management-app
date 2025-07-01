@@ -13,7 +13,7 @@
         <label>room</label>
         <live_feed_enabled>false</live_feed_enabled>
         <name>u_room</name>
-        <number_ref display_value="ROO">5be31f13c31a22107a9976d4e40131f6</number_ref>
+        <number_ref display_value="ROM">5be31f13c31a22107a9976d4e40131f6</number_ref>
         <provider_class/>
         <read_access>true</read_access>
         <scriptable_table>false</scriptable_table>

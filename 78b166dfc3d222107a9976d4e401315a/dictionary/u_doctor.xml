@@ -11,7 +11,7 @@
         <element attributes="edge_encryption_enabled=true" label="First Name" mandatory="true" max_length="40" name="u_first_name" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Last Name" mandatory="true" max_length="40" name="u_last_name" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Office Location" mandatory="true" max_length="40" name="u_office_location" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="Email" mandatory="true" max_length="40" name="u_email" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Email" mandatory="true" max_length="40" name="u_email" type="string" unique="true"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="doctor_id" max_length="40" name="u_number" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Work Notes" max_length="4000" name="u_work_notes" type="journal"/>
         <element label="Contact Number" max_length="40" name="u_contact_number" type="phone_number_e164"/>
@@ -22,5 +22,8 @@
                 <element inactive_on_update="false" label="Active" sequence="1" value="active"/>
             </choice>
         </element>
+        <index name="index" unique="true">
+            <element name="u_email"/>
+        </index>
     </element>
 </database>

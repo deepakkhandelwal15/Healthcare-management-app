@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" db_object_id="8166e2d7c31622107a9976d4e40131a0" label="Patient Record" max_length="40" name="u_patient_record" type="collection">
+    <element attributes="email_client=true" audit="true" db_object_id="8166e2d7c31622107a9976d4e40131a0" label="Patient Record" max_length="40" name="u_patient_record" type="collection">
         <element label="Active" max_length="40" name="u_active" type="boolean"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Gender" mandatory="true" max_length="40" name="u_gender" type="string">
             <choice>

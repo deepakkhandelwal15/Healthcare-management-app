@@ -2,7 +2,7 @@
     <sys_dictionary action="INSERT_OR_UPDATE" element="u_status" table="u_medication">
         <active>true</active>
         <array>false</array>
-        <attributes>edge_encryption_enabled=true</attributes>
+        <attributes>edge_encryption_enabled=true,ignore_control=true</attributes>
         <audit>false</audit>
         <calculation/>
         <choice>3</choice>
@@ -53,7 +53,7 @@
         <sys_scope display_value="Healthcare Management">78b166dfc3d222107a9976d4e401315a</sys_scope>
         <sys_update_name>sys_dictionary_u_medication_u_status</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-01 18:58:00</sys_updated_on>
+        <sys_updated_on>2025-07-02 04:59:57</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

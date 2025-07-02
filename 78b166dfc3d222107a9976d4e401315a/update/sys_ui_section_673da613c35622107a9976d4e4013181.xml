@@ -4,13 +4,13 @@
             <element>u_email</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-06-28 10:12:47</sys_created_on>
-            <sys_id>95b94fd3c3d622107a9976d4e40131e1</sys_id>
+            <sys_created_on>2025-07-01 18:01:45</sys_created_on>
+            <sys_id>c0d1982cc3a2a2107a9976d4e4013137</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Contact Information" display_value="Contact Information" name="u_patient_record" sys_domain="global" view="Default view">673da613c35622107a9976d4e4013181</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-06-28 10:12:47</sys_updated_on>
+            <sys_updated_on>2025-07-01 18:01:45</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>u_address</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-06-28 10:12:47</sys_created_on>
-            <sys_id>1db94fd3c3d622107a9976d4e40131e1</sys_id>
+            <sys_created_on>2025-07-01 18:01:45</sys_created_on>
+            <sys_id>8cd1982cc3a2a2107a9976d4e4013137</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Contact Information" display_value="Contact Information" name="u_patient_record" sys_domain="global" view="Default view">673da613c35622107a9976d4e4013181</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-06-28 10:12:47</sys_updated_on>
+            <sys_updated_on>2025-07-01 18:01:45</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,27 @@
             <element>u_contact_number</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-06-28 10:12:47</sys_created_on>
-            <sys_id>91b94fd3c3d622107a9976d4e40131e2</sys_id>
+            <sys_created_on>2025-07-01 18:01:45</sys_created_on>
+            <sys_id>04d1982cc3a2a2107a9976d4e4013138</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Contact Information" display_value="Contact Information" name="u_patient_record" sys_domain="global" view="Default view">673da613c35622107a9976d4e4013181</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-06-28 10:12:47</sys_updated_on>
+            <sys_updated_on>2025-07-01 18:01:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_choice</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-01 18:01:45</sys_created_on>
+            <sys_id>88d1982cc3a2a2107a9976d4e4013138</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Contact Information" display_value="Contact Information" name="u_patient_record" sys_domain="global" view="Default view">673da613c35622107a9976d4e4013181</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-01 18:01:45</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_enhanced_information" label="enhanced information" language="en" table="u_patient_record">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_enhanced_information</element>
+            <help/>
+            <hint/>
+            <label>enhanced information</label>
+            <language>en</language>
+            <name>u_patient_record</name>
+            <plural>enhanced informations</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-01 18:13:15</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>enhanced information</sys_name>
+            <sys_package display_value="Healthcare Management" source="78b166dfc3d222107a9976d4e401315a">78b166dfc3d222107a9976d4e401315a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Healthcare Management">78b166dfc3d222107a9976d4e401315a</sys_scope>
+            <sys_update_name>sys_documentation_u_patient_record_u_enhanced_information_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-01 18:13:15</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

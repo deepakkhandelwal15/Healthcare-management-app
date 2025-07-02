@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" db_object_id="7793f21bc35622107a9976d4e40131da" extends="task" label="Appointment Table" max_length="40" name="u_appointment_table" type="collection">
         <element attributes="encode_utf8=false" label="Doctor" mandatory="true" max_length="32" name="u_reference_6" reference="cmdb_ci_appl_dot_net" type="reference"/>
-        <element attributes="edge_encryption_enabled=true" label="status" mandatory="true" max_length="40" name="u_status" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="new" label="Status" mandatory="true" max_length="40" name="u_status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="New" sequence="0" value="new"/>
+                <element inactive_on_update="false" label="Scheduled" sequence="1" value="scheduled"/>
+                <element inactive_on_update="false" label="Completed" sequence="3" value="completed"/>
+                <element inactive_on_update="false" label="Confirmed" sequence="2" value="confirmed"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="4" value="cancelled"/>
+            </choice>
+        </element>
         <element attributes="encode_utf8=false" label="Patient Id" mandatory="true" max_length="32" name="u_reference_3" reference="u_patient_record" type="reference"/>
         <element attributes="encode_utf8=false" label="Doctor" mandatory="true" max_length="32" name="u_reference_7" reference="cmdb_ci_appl_dot_net" type="reference"/>
         <element attributes="encode_utf8=false" label="Doctor" mandatory="true" max_length="32" name="u_doctor" reference="u_doctor" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="doctors" max_length="4000" name="u_doctors" type="journal"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Status" mandatory="true" max_length="40" name="u_choice_8" type="string">
             <choice>
                 <element inactive_on_update="false" label="Completed" sequence="2" value="completed"/>
@@ -25,6 +34,7 @@
                 <element inactive_on_update="false" label="Cardiology" sequence="1" value="cardiology"/>
             </choice>
         </element>
+        <element attributes="edge_encryption_enabled=true" label="Simplified" max_length="4000" name="u_simplified" type="journal"/>
         <element attributes="edge_encryption_enabled=true" label="Appointment id" max_length="40" name="u_string_1" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Department" mandatory="true" max_length="40" name="u_department" type="string"/>
     </element>

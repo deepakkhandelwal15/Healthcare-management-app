@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_process_flow">
+    <sys_process_flow action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="u_doctor">u_status=new^EQ<item display_value="New" endquery="false" field="u_status" goto="false" newquery="false" operator="=" or="false" value="new"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <description/>
+        <label>New</label>
+        <name>doctor_process_flow</name>
+        <order>10</order>
+        <sys_class_name>sys_process_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-01 19:19:06</sys_created_on>
+        <sys_id>6463a0a0c326a2107a9976d4e4013115</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>doctor_process_flow</sys_name>
+        <sys_package display_value="Healthcare Management" source="78b166dfc3d222107a9976d4e401315a">78b166dfc3d222107a9976d4e401315a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management">78b166dfc3d222107a9976d4e401315a</sys_scope>
+        <sys_update_name>sys_process_flow_6463a0a0c326a2107a9976d4e4013115</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-01 19:19:06</sys_updated_on>
+        <table>u_doctor</table>
+    </sys_process_flow>
+</record_update>

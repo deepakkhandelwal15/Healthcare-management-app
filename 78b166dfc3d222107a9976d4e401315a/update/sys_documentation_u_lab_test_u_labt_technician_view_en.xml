@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_labt_technician_view" label="Lab Technician View:" language="en" table="u_lab_test">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_labt_technician_view</element>
+            <help/>
+            <hint/>
+            <label>Lab Technician View:</label>
+            <language>en</language>
+            <name>u_lab_test</name>
+            <plural>Lab Technician View:s</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-01 19:08:05</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Lab Technician View:</sys_name>
+            <sys_package display_value="Healthcare Management" source="78b166dfc3d222107a9976d4e401315a">78b166dfc3d222107a9976d4e401315a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Healthcare Management">78b166dfc3d222107a9976d4e401315a</sys_scope>
+            <sys_update_name>sys_documentation_u_lab_test_u_labt_technician_view_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-01 19:08:05</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

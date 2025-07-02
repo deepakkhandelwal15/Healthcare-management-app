@@ -6,6 +6,15 @@
         <element attributes="encode_utf8=false" label="Ward_Id" mandatory="true" max_length="32" name="u_ward_id" reference="cmdb_ci_appl_dot_net" type="reference"/>
         <element label="Occupied Bed" mandatory="true" max_length="40" name="u_occupied_bed" type="integer"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Room Id" max_length="40" name="u_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="new" label="Status" mandatory="true" max_length="40" name="u_status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Available" sequence="1" value="available"/>
+                <element inactive_on_update="false" label="Occupied" sequence="2" value="occupied"/>
+                <element inactive_on_update="false" label="Under Maintenance" sequence="3" value="under maintenance"/>
+                <element inactive_on_update="false" label="New" sequence="0" value="new"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Admin View" max_length="4000" name="u_admin_view" type="journal"/>
         <index name="index">
             <element name="u_ward_id"/>
         </index>

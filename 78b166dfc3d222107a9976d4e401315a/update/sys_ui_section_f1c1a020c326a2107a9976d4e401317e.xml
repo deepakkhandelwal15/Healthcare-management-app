@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Activity/Notes" section_id="f1c1a020c326a2107a9976d4e401317e" sys_domain="global" table="u_lab_test" version="3" view="Patient_View">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_work_notes</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-01 19:11:32</sys_created_on>
+            <sys_id>1ec1e020c326a2107a9976d4e4013141</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Activity/Notes" display_value="Activity/Notes" name="u_lab_test" sys_domain="global" view="c7a798e0c3e2a2107a9976d4e401311a">f1c1a020c326a2107a9976d4e401317e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-01 19:11:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>activity.xml</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-01 19:11:32</sys_created_on>
+            <sys_id>92c1e020c326a2107a9976d4e4013142</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter display_value="Activities (filtered)">444ea5c6bf310100e628555b3f0739d6</sys_ui_formatter>
+            <sys_ui_section caption="Activity/Notes" display_value="Activity/Notes" name="u_lab_test" sys_domain="global" view="c7a798e0c3e2a2107a9976d4e401311a">f1c1a020c326a2107a9976d4e401317e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-01 19:11:32</sys_updated_on>
+            <sys_user/>
+            <type>formatter</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>short_description</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-01 19:11:32</sys_created_on>
+            <sys_id>dac1e020c326a2107a9976d4e4013142</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Activity/Notes" display_value="Activity/Notes" name="u_lab_test" sys_domain="global" view="c7a798e0c3e2a2107a9976d4e401311a">f1c1a020c326a2107a9976d4e401317e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-01 19:11:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>description</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-01 19:11:32</sys_created_on>
+            <sys_id>52c1e020c326a2107a9976d4e4013143</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Activity/Notes" display_value="Activity/Notes" name="u_lab_test" sys_domain="global" view="c7a798e0c3e2a2107a9976d4e401311a">f1c1a020c326a2107a9976d4e401317e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-01 19:11:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_labt_technician_view</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-01 19:11:32</sys_created_on>
+            <sys_id>d6c1e020c326a2107a9976d4e4013143</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Activity/Notes" display_value="Activity/Notes" name="u_lab_test" sys_domain="global" view="c7a798e0c3e2a2107a9976d4e401311a">f1c1a020c326a2107a9976d4e401317e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-01 19:11:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_patient</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-01 19:11:32</sys_created_on>
+            <sys_id>5ec1e020c326a2107a9976d4e4013143</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Activity/Notes" display_value="Activity/Notes" name="u_lab_test" sys_domain="global" view="c7a798e0c3e2a2107a9976d4e401311a">f1c1a020c326a2107a9976d4e401317e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-01 19:11:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>work_notes</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-01 19:11:32</sys_created_on>
+            <sys_id>d2c1e020c326a2107a9976d4e4013144</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Activity/Notes" display_value="Activity/Notes" name="u_lab_test" sys_domain="global" view="c7a798e0c3e2a2107a9976d4e401311a">f1c1a020c326a2107a9976d4e401317e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-01 19:11:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_status</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-01 19:11:32</sys_created_on>
+            <sys_id>5ac1e020c326a2107a9976d4e4013144</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Activity/Notes" display_value="Activity/Notes" name="u_lab_test" sys_domain="global" view="c7a798e0c3e2a2107a9976d4e401311a">f1c1a020c326a2107a9976d4e401317e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-01 19:11:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Activity/Notes</caption>
+            <header>false</header>
+            <name>u_lab_test</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-01 19:11:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f1c1a020c326a2107a9976d4e401317e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_lab_test</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Healthcare Management" source="78b166dfc3d222107a9976d4e401315a">78b166dfc3d222107a9976d4e401315a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Healthcare Management">78b166dfc3d222107a9976d4e401315a</sys_scope>
+            <sys_update_name>sys_ui_section_f1c1a020c326a2107a9976d4e401317e</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-01 19:11:30</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Patient View" name="Patient_View">c7a798e0c3e2a2107a9976d4e401311a</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

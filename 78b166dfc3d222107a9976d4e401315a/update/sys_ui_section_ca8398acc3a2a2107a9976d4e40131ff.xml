@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Emergency Contact" section_id="ca8398acc3a2a2107a9976d4e40131ff" sys_domain="global" table="u_patient_record" version="3" view="Staff_View">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_emergency_contact</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-01 18:09:17</sys_created_on>
+            <sys_id>ea83d8acc3a2a2107a9976d4e4013130</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Emergency Contact" display_value="Emergency Contact" name="u_patient_record" sys_domain="global" view="0e8398acc3a2a2107a9976d4e40131f8">ca8398acc3a2a2107a9976d4e40131ff</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-01 18:09:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Emergency Contact</caption>
+            <header>false</header>
+            <name>u_patient_record</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-01 18:09:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ca8398acc3a2a2107a9976d4e40131ff</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_patient_record</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Healthcare Management" source="78b166dfc3d222107a9976d4e401315a">78b166dfc3d222107a9976d4e401315a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Healthcare Management">78b166dfc3d222107a9976d4e401315a</sys_scope>
+            <sys_update_name>sys_ui_section_ca8398acc3a2a2107a9976d4e40131ff</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-01 18:09:16</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Staff View" name="Staff_View">0e8398acc3a2a2107a9976d4e40131f8</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

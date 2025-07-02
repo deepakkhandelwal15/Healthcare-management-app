@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_process_flow">
+    <sys_process_flow action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="u_appointment_table">u_status=scheduled^EQ<item display_value="Scheduled" endquery="false" field="u_status" goto="false" newquery="false" operator="=" or="false" value="scheduled"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <description/>
+        <label>New Scheduled</label>
+        <name>appointment_process_flow</name>
+        <order>20</order>
+        <sys_class_name>sys_process_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-01 18:23:57</sys_created_on>
+        <sys_id>5de6d420c3e2a2107a9976d4e401313b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>appointment_process_flow</sys_name>
+        <sys_package display_value="Healthcare Management" source="78b166dfc3d222107a9976d4e401315a">78b166dfc3d222107a9976d4e401315a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management">78b166dfc3d222107a9976d4e401315a</sys_scope>
+        <sys_update_name>sys_process_flow_5de6d420c3e2a2107a9976d4e401313b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-01 18:23:57</sys_updated_on>
+        <table>u_appointment_table</table>
+    </sys_process_flow>
+</record_update>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>u_policy</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Update coverage details</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	var insgr=new GlideRecord("u_insurance");
+	insgr.query();
+	while(insgr.next()){
+		var edet=insgr.u_coverage_details.toString().split(',');
+		if(edet.indexof(current.sys_id.toString())===-1)
+		{
+			edet.push(current.sys_id.toString());
+			insgr.u_coverage_details=edet.join(',');
+			insgr.update();
+			gs.addInfoMessage("Policy added to all insurance");
+		}
+	}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-08 04:59:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>de4061e2c3e6a2107a9976d4e401314e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Update coverage details</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Healthcare Management" source="78b166dfc3d222107a9976d4e401315a">78b166dfc3d222107a9976d4e401315a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management">78b166dfc3d222107a9976d4e401315a</sys_scope>
+        <sys_update_name>sys_script_de4061e2c3e6a2107a9976d4e401314e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 04:59:56</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=de4061e2c3e6a2107a9976d4e401314e"/>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>de4061e2c3e6a2107a9976d4e401314e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-08 04:59:54</sys_created_on>
+        <sys_id>aff1eda2c3e6a2107a9976d4e40131ed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 04:59:54</sys_updated_on>
+        <table>sys_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

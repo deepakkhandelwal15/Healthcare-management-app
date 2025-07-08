@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="u_coverage_details" table="u_insurance">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="" table="u_policy">
         <active>true</active>
         <array>false</array>
-        <attributes>edge_encryption_enabled=true,encrypt=true</attributes>
+        <attributes/>
         <audit>false</audit>
-        <calculation/>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>Coverage Details</column_label>
+        <column_label/>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -21,21 +26,21 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>u_coverage_details</element>
+        <element/>
         <element_reference>false</element_reference>
         <foreign_database/>
         <formula/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="String">string</internal_type>
-        <mandatory>true</mandatory>
+        <internal_type display_value="Collection">collection</internal_type>
+        <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <name>u_insurance</name>
+        <name>u_policy</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
-        <reference display_value="" name="u_policy">u_policy</reference>
+        <reference/>
         <reference_cascade_rule/>
         <reference_floats>false</reference_floats>
         <reference_key/>
@@ -46,14 +51,14 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-06-28 11:23:35</sys_created_on>
-        <sys_name>Coverage Details</sys_name>
+        <sys_created_on>2025-07-08 04:46:45</sys_created_on>
+        <sys_name>u_policy</sys_name>
         <sys_package display_value="Healthcare Management" source="78b166dfc3d222107a9976d4e401315a">78b166dfc3d222107a9976d4e401315a</sys_package>
         <sys_policy/>
         <sys_scope display_value="Healthcare Management">78b166dfc3d222107a9976d4e401315a</sys_scope>
-        <sys_update_name>sys_dictionary_u_insurance_u_coverage_details</sys_update_name>
+        <sys_update_name>sys_dictionary_u_policy_null</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-08 04:50:57</sys_updated_on>
+        <sys_updated_on>2025-07-08 04:46:45</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -66,4 +71,18 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_dictionary>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Healthcare Management">78b166dfc3d222107a9976d4e401315a</claim_owner_scope>
+        <claim_timestamp>197e976c9140000001</claim_timestamp>
+        <metadata_update_name>sys_dictionary_u_policy_null</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>Healthcare Management</previous_claim_name>
+        <previous_claim_scope>78b166dfc3d222107a9976d4e401315a</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-08 09:56:05</sys_created_on>
+        <sys_id>8ec5ea26c32ea2107a9976d4e40131f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 09:56:05</sys_updated_on>
+    </sys_claim>
 </record_update>

@@ -33,6 +33,7 @@
                 <element inactive_on_update="false" label="Twice Daily" sequence="1" value="twice daily"/>
             </choice>
         </element>
+        <element attributes="edge_encryption_enabled=true" label="Total Dosage" max_length="40" name="u_total_dosage" read_only="true" type="string"/>
         <element attributes="encode_utf8=false" label="Patient Record" mandatory="true" max_length="32" name="u_patient_id" reference="u_patient_record" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="Dosage" mandatory="true" max_length="1000" name="u_string_3" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Paintent" max_length="4000" name="u_patient" type="journal"/>

@@ -2,7 +2,7 @@
     <element audit="true" db_object_id="e888df97c31a22107a9976d4e4013191" extends="task" label="insurance" max_length="40" name="u_insurance" type="collection">
         <element attributes="edge_encryption_enabled=true" label="administrator" max_length="4000" name="u_administrator" type="journal"/>
         <element attributes="edge_encryption_enabled=true" label="Provider" mandatory="true" max_length="40" name="u_provider" type="string"/>
-        <element attributes="edge_encryption_enabled=true,encrypt=true" label="Coverage Details" mandatory="true" max_length="40" name="u_coverage_details" type="string"/>
+        <element attributes="edge_encryption_enabled=true,encrypt=true" label="Coverage Details" mandatory="true" max_length="40" name="u_coverage_details" reference="u_policy" type="string"/>
         <element attributes="encode_utf8=false" label="Patient Id" mandatory="true" max_length="32" name="u_patient_id" reference="u_patient_record" type="reference"/>
         <element attributes="edge_encryption_enabled=true" choice="3" default="new" label="Status" mandatory="true" max_length="40" name="u_status" type="string">
             <choice>

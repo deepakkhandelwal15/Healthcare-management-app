@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>global.BillingUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>BillingUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var BillingUtils = Class.create();
+BillingUtils.prototype = {
+    initialize: function() {
+    },
+      getAllBillsByPatient: function (patientId) {
+        var result = '';
+        var gr = new GlideRecord('u_billing');
+        gr.addQuery('u_patient_id.u_patient_id', patientId);
+        gr.query();
+        while (gr.next()) {
+            result += gr.getValue('number') + ';' + gr.getValue('u_total_amount') + ';' + gr.getValue('u_status') + '\n';
+        }
+        return result || false;
+    },
+
+    // 2. Get unpaid bills (u_status = 'Pending' or 'Unpaid')
+    getUnpaidBills: function (patientId) {
+        var result = '';
+        var gr = new GlideRecord('u_billing');
+        gr.addQuery('u_patient_id.u_patient_id', patientId);
+        gr.addQuery('u_status', 'Pending'); // or 'Unpaid' depending on your system
+        gr.query();
+        while (gr.next()) {
+            result += gr.getValue('number') + ';' + gr.getValue('u_total_amount') + '\n';
+        }
+        return result || false;
+    },
+
+    // 3. Get paid bills (u_status = 'Paid')
+    getPaidBills: function (patientId) {
+        var result = '';
+        var gr = new GlideRecord('u_billing');
+        gr.addQuery('u_patient_id.u_patient_id', patientId);
+        gr.addQuery('u_status', 'Paid');
+        gr.query();
+        while (gr.next()) {
+            result += gr.getValue('number') + ';' + gr.getValue('u_total_amount') + '\n';
+        }
+        return result || false;
+    },
+
+    // 4. Get billing details by billing number
+    getBillingDetailsByNumber: function (billingNumber) {
+        var gr = new GlideRecord('u_billing');
+        gr.addQuery('number', billingNumber);
+        gr.query();
+        if (gr.next()) {
+            return gr.getValue('number') + ';' + gr.getValue('u_total_amount') + ';' + gr.getValue('u_status');
+        }
+        return false;
+    },
+
+    // 5. Get total billed amount for patient
+    getTotalBilledAmount: function (patientId) {
+        var total = 0;
+        var gr = new GlideRecord('u_billing');
+        gr.addQuery('u_patient_id.u_patient_id', patientId);
+        gr.query();
+        while (gr.next()) {
+            total += parseFloat(gr.getValue('u_total_amount') || 0);
+        }
+        return total.toString();
+    },
+
+    type: 'BillingUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-08 18:47:22</sys_created_on>
+        <sys_id>c32fd4f2c366e2107a9976d4e4013136</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BillingUtils</sys_name>
+        <sys_package display_value="Healthcare Management" source="78b166dfc3d222107a9976d4e401315a">78b166dfc3d222107a9976d4e401315a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management">78b166dfc3d222107a9976d4e401315a</sys_scope>
+        <sys_update_name>sys_script_include_c32fd4f2c366e2107a9976d4e4013136</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 18:47:22</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>c32fd4f2c366e2107a9976d4e4013136</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-08 18:47:21</sys_created_on>
+        <sys_id>5c6f1036c366e2107a9976d4e40131f5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 18:47:21</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

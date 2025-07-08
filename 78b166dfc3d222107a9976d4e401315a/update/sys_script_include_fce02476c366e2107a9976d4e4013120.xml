@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>global.InsuranceUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>InsuranceUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var InsuranceUtils = Class.create();
+InsuranceUtils.prototype = {
+    initialize: function() {
+    },
+     getAllPoliciesByPatient: function (patientId) {
+        var result = '';
+        var gr = new GlideRecord('u_insurance');
+        gr.addQuery('u_patient_id.u_patient_id', patientId);
+        gr.query();
+        while (gr.next()) {
+            result += gr.getValue('u_policy_num') + ';' + gr.getValue('u_provider') + ';' + gr.getValue('u_coverage') + '\n';
+        }
+        return result || false;
+    },
+
+    // 2. Get active policies (u_status = 'Active')
+    getActivePolicies: function (patientId) {
+        var result = '';
+        var gr = new GlideRecord('u_insurance');
+        gr.addQuery('u_patient_id.u_patient_id', patientId);
+        gr.addQuery('u_status', 'Active');
+        gr.query();
+        while (gr.next()) {
+            result += gr.getValue('u_policy_num') + ';' + gr.getValue('u_provider') + '\n';
+        }
+        return result || false;
+    },
+
+    // 3. Get policy by number
+    getPolicyByNumber: function (policyNumber) {
+        var gr = new GlideRecord('u_insurance');
+        gr.addQuery('u_policy_num', policyNumber);
+        gr.query();
+        if (gr.next()) {
+            return gr.getValue('u_policy_num') + ';' + gr.getValue('u_provider') + ';' + gr.getValue('u_coverage');
+        }
+        return false;
+    },
+
+    // 4. Get insurance provider(s) for patient
+    getProvidersByPatient: function (patientId) {
+        var result = '';
+        var gr = new GlideRecord('u_insurance');
+        gr.addQuery('u_patient_id.u_patient_id', patientId);
+        gr.query();
+        while (gr.next()) {
+            result += gr.getValue('u_provider') + '\n';
+        }
+        return result || false;
+    },
+
+    // 5. Get coverage details by policy number
+    getCoverageDetails: function (policyNumber) {
+        var gr = new GlideRecord('u_insurance');
+        gr.addQuery('u_policy_num', policyNumber);
+        gr.query();
+        if (gr.next()) {
+            return gr.getValue('u_coverage');
+        }
+        return false;
+    },
+
+    type: 'InsuranceUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-08 18:54:28</sys_created_on>
+        <sys_id>fce02476c366e2107a9976d4e4013120</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>InsuranceUtils</sys_name>
+        <sys_package display_value="Healthcare Management" source="78b166dfc3d222107a9976d4e401315a">78b166dfc3d222107a9976d4e401315a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management">78b166dfc3d222107a9976d4e401315a</sys_scope>
+        <sys_update_name>sys_script_include_fce02476c366e2107a9976d4e4013120</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 18:54:28</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>fce02476c366e2107a9976d4e4013120</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-08 18:54:28</sys_created_on>
+        <sys_id>a001e476c366e2107a9976d4e40131ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 18:54:28</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>global.LabTestUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>LabTestUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var LabTestUtils = Class.create();
+LabTestUtils.prototype = {
+    initialize: function () {
+    },
+
+    /* 1️⃣  Fetch lab‑test results by Test Number */
+    getLabTestResultsById: function (testNumber) {
+        var gr = new GlideRecord('u_lab_test');
+        gr.addQuery('number', testNumber);        // LAB0001008, etc.
+        gr.query();
+        if (gr.next()) {
+            // return "TestType;Results"
+            return gr.getValue('u_test_type') + ';' + gr.getValue('u_results');
+        }
+        return false;
+    },
+
+    /* 2️⃣  Check if results are ready (Status = Completed & results not empty) */
+    isLabTestResultReady: function (testNumber) {
+        var gr = new GlideRecord('u_lab_test');
+        gr.addQuery('number', testNumber);
+        gr.addQuery('u_status', 'Completed');
+        gr.addNotNullQuery('u_results');
+        gr.query();
+        return gr.hasNext();   // true / false
+    },
+
+    /* 3️⃣  Get all lab tests for a patient */
+    getLabTestsByPatient: function (patientId) {
+        var result = '';
+        var gr = new GlideRecord('u_lab_test');
+        gr.addQuery('u_patient_id.u_patient_id', patientId);
+        gr.query();
+        while (gr.next()) {
+            // "Number;TestType;Status"
+            result += gr.getValue('number') + ';' + gr.getValue('u_test_type') + ';' +
+                      gr.getValue('u_status') + '\n';
+        }
+        return result || false;
+    },
+
+    /* 4️⃣  Get lab tests by scheduled date (YYYY‑MM‑DD) */
+    getLabTestsByDate: function (dateStr) {
+        var result = '';
+        var gr = new GlideRecord('u_lab_test');
+        gr.addQuery('u_scheduled_date', 'STARTSWITH', dateStr);  // e.g. "2025-06-20"
+        gr.query();
+        while (gr.next()) {
+            // "Number;PatientID;TestType"
+            result += gr.getValue('number') + ';' +
+                      gr.getDisplayValue('u_patient_id') + ';' +
+                      gr.getValue('u_test_type') + '\n';
+        }
+        return result || false;
+    },
+
+    type: 'LabTestUtils'
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-08 18:39:55</sys_created_on>
+        <sys_id>778c587ec326e2107a9976d4e4013120</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>LabTestUtils</sys_name>
+        <sys_package display_value="Healthcare Management" source="78b166dfc3d222107a9976d4e401315a">78b166dfc3d222107a9976d4e401315a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management">78b166dfc3d222107a9976d4e401315a</sys_scope>
+        <sys_update_name>sys_script_include_778c587ec326e2107a9976d4e4013120</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 18:39:55</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>778c587ec326e2107a9976d4e4013120</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-08 18:39:54</sys_created_on>
+        <sys_id>d3ad9832c366e2107a9976d4e401319c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 18:39:54</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>global.AppointmentUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>AppointmentUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var AppointmentUtils = Class.create();
+AppointmentUtils.prototype = {
+    initialize: function() {
+    },
+     getAppointmentsByPatient: function (patientId) {
+        var result = '';
+        var gr = new GlideRecord('u_appointment_table');
+        gr.addQuery('u_patient_id.u_patient_id', patientId);
+        gr.query();
+        while (gr.next()) {
+            result += gr.getValue('u_number') + ';' + gr.getValue('u_appointment_date') + ';' + gr.getValue('u_department') + '\n';
+        }
+        return result || false;
+    },
+
+    // 2. Check if an appointment is confirmed
+    isAppointmentConfirmed: function (appointmentNumber) {
+        var gr = new GlideRecord('u_appointment_table');
+        gr.addQuery('u_number', appointmentNumber);
+        gr.query();
+        if (gr.next()) {
+            return gr.getDisplayValue('state') === 'Confirmed';
+        }
+        return false;
+    },
+
+    // 3. Fetch appointment details by ID
+    getAppointmentDetailsById: function (appointmentNumber) {
+        var gr = new GlideRecord('u_appointment_table');
+        gr.addQuery('u_number', appointmentNumber);
+        gr.query();
+        if (gr.next()) {
+            return gr.getValue('u_number') + ';' + gr.getValue('u_appointment_date') + ';' + gr.getValue('u_department') + ';' + gr.getDisplayValue('u_patient_id');
+        }
+        return false;
+    },
+
+    // 4. Fetch appointments by date
+    getAppointmentsByDate: function (date) {
+        var result = '';
+        var gr = new GlideRecord('u_appointment_table');
+        gr.addQuery('u_appointment_date', 'STARTSWITH', date); // e.g., '2025-07-08'
+        gr.query();
+        while (gr.next()) {
+            result += gr.getValue('u_number') + ';' + gr.getDisplayValue('u_patient_id') + ';' + gr.getValue('u_department') + '\n';
+        }
+        return result || false;
+    },
+
+    // 5. Fetch appointments by department
+    getAppointmentsByDepartment: function (department) {
+        var result = '';
+        var gr = new GlideRecord('u_appointment_table');
+        gr.addQuery('u_department', department);
+        gr.query();
+        while (gr.next()) {
+            result += gr.getValue('u_number') + ';' + gr.getValue('u_appointment_date') + ';' + gr.getDisplayValue('state') + '\n';
+        }
+        return result || false;
+    },
+    type: 'AppointmentUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-08 18:11:29</sys_created_on>
+        <sys_id>a4071836c326e2107a9976d4e4013184</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>AppointmentUtils</sys_name>
+        <sys_package display_value="Healthcare Management" source="78b166dfc3d222107a9976d4e401315a">78b166dfc3d222107a9976d4e401315a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management">78b166dfc3d222107a9976d4e401315a</sys_scope>
+        <sys_update_name>sys_script_include_a4071836c326e2107a9976d4e4013184</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 18:27:41</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>a4071836c326e2107a9976d4e4013184</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-08 18:11:28</sys_created_on>
+        <sys_id>ba275036c326e2107a9976d4e401310c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 18:11:28</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

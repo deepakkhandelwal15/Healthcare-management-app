@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>global.MedicationUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>MedicationUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var MedicationUtils = Class.create();
+MedicationUtils.prototype = {
+    initialize: function() {
+    },
+      getAllMedications: function (patientId) {
+        var result = '';
+        var gr = new GlideRecord('u_medication');
+        gr.addQuery('u_patient_id.u_patient_id', patientId);
+        gr.query();
+        while (gr.next()) {
+            result += gr.getValue('u_medication_name') + ';' + gr.getValue('u_dosage') + '\n';
+        }
+        return result || false;
+    },
+
+    // 2. Get active medications (assuming field 'u_status' = 'Active')
+    getActiveMedications: function (patientId) {
+        var result = '';
+        var gr = new GlideRecord('u_medication');
+        gr.addQuery('u_patient_id.u_patient_id', patientId);
+        gr.addQuery('u_status', 'Active');
+        gr.query();
+        while (gr.next()) {
+            result += gr.getValue('u_medication_name') + ';' + gr.getValue('u_dosage') + '\n';
+        }
+        return result || false;
+    },
+
+    // 3. Get medication by name
+    getMedicationByName: function (patientId, medicationName) {
+        var result = '';
+        var gr = new GlideRecord('u_medication');
+        gr.addQuery('u_patient_id.u_patient_id', patientId);
+        gr.addQuery('u_medication_name', medicationName);
+        gr.query();
+        while (gr.next()) {
+            result += gr.getValue('u_medication_name') + ';' + gr.getValue('u_dosage') + ';' + gr.getValue('u_frequency') + '\n';
+        }
+        return result || false;
+    },
+
+    // 4. Get medication history (assumes field u_end_date exists)
+    getMedicationHistory: function (patientId) {
+        var result = '';
+        var gr = new GlideRecord('u_medication');
+        gr.addQuery('u_patient_id.u_patient_id', patientId);
+        gr.addNotNullQuery('u_end_date');
+        gr.query();
+        while (gr.next()) {
+            result += gr.getValue('u_medication_name') + ';' + gr.getValue('u_start_date') + ' to ' + gr.getValue('u_end_date') + '\n';
+        }
+        return result || false;
+    },
+
+    // 5. Check if a medication is currently prescribed
+    isMedicationPrescribed: function (patientId, medicationName) {
+        var gr = new GlideRecord('u_medication');
+        gr.addQuery('u_patient_id.u_patient_id', patientId);
+        gr.addQuery('u_medication_name', medicationName);
+        gr.addNullQuery('u_end_date'); // no end date means it's still prescribed
+        gr.query();
+        return gr.hasNext();
+    },
+    type: 'MedicationUtils'
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-08 18:27:22</sys_created_on>
+        <sys_id>e28a5c3ec326e2107a9976d4e40131cd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>MedicationUtils</sys_name>
+        <sys_package display_value="Healthcare Management" source="78b166dfc3d222107a9976d4e401315a">78b166dfc3d222107a9976d4e401315a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management">78b166dfc3d222107a9976d4e401315a</sys_scope>
+        <sys_update_name>sys_script_include_e28a5c3ec326e2107a9976d4e40131cd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 18:27:22</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>e28a5c3ec326e2107a9976d4e40131cd</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-08 18:27:21</sys_created_on>
+        <sys_id>1bca987ec326e2107a9976d4e4013112</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 18:27:21</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

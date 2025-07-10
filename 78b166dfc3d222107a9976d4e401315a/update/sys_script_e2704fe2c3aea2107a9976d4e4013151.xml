@@ -5,20 +5,20 @@
         <action_delete>false</action_delete>
         <action_insert>true</action_insert>
         <action_query>false</action_query>
-        <action_update>false</action_update>
+        <action_update>true</action_update>
         <active>true</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
-        <collection>u_insurance</collection>
+        <collection>u_room</collection>
         <condition/>
         <description/>
         <execute_function>false</execute_function>
         <filter_condition/>
         <is_rest>false</is_rest>
         <message/>
-        <name>Update coverage details</name>
+        <name>Updated_Ward_Ocuupancy</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -29,40 +29,46 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
-	if(current.u_policy_num != previous.u_policy_num){
-		var desc = current.u_policy_num.u_description;
-		current.u_coverage = desc;
-		gs.addInfoMessage("Details Updated")
+	if(current.u_assigned_to != previous.u_assigned_to){
+		var ward = new GlideRecord('u_ward')
+		var wardID = current.u_ward_id
+		ward.addQuery('sys_id', wardID)
+		ward.query()
+		if(ward.next()){
+			ward.u_occupancy += 1
+			ward.update()
+			gs.addInfoMessage('occupancy updated...')
+		}
 	}
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-07-08 04:59:56</sys_created_on>
+        <sys_created_on>2025-07-08 11:53:50</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>de4061e2c3e6a2107a9976d4e401314e</sys_id>
-        <sys_mod_count>7</sys_mod_count>
-        <sys_name>Update coverage details</sys_name>
+        <sys_id>e2704fe2c3aea2107a9976d4e4013151</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Updated_Ward_Ocuupancy</sys_name>
         <sys_overrides/>
         <sys_package display_value="Healthcare Management" source="78b166dfc3d222107a9976d4e401315a">78b166dfc3d222107a9976d4e401315a</sys_package>
         <sys_policy/>
         <sys_scope display_value="Healthcare Management">78b166dfc3d222107a9976d4e401315a</sys_scope>
-        <sys_update_name>sys_script_de4061e2c3e6a2107a9976d4e401314e</sys_update_name>
+        <sys_update_name>sys_script_e2704fe2c3aea2107a9976d4e4013151</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-08 11:28:00</sys_updated_on>
+        <sys_updated_on>2025-07-08 11:53:50</sys_updated_on>
         <template/>
-        <when>before</when>
+        <when>after</when>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=de4061e2c3e6a2107a9976d4e401314e"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=e2704fe2c3aea2107a9976d4e4013151"/>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
-        <id>de4061e2c3e6a2107a9976d4e401314e</id>
+        <id>e2704fe2c3aea2107a9976d4e4013151</id>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-07-08 04:59:54</sys_created_on>
-        <sys_id>aff1eda2c3e6a2107a9976d4e40131ed</sys_id>
+        <sys_created_on>2025-07-08 11:53:50</sys_created_on>
+        <sys_id>b6b0cfe2c3aea2107a9976d4e401316b</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-08 04:59:54</sys_updated_on>
+        <sys_updated_on>2025-07-08 11:53:50</sys_updated_on>
         <table>sys_script</table>
         <use_es_latest>true</use_es_latest>
     </sys_es_latest_script>

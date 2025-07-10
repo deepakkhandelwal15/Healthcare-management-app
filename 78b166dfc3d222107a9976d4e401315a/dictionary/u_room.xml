@@ -2,10 +2,10 @@
     <element audit="true" db_object_id="ece3db13c31a22107a9976d4e40131b8" label="room" max_length="40" name="u_room" type="collection">
         <element label="Bed Count" mandatory="true" max_length="40" name="u_bed_count" type="integer"/>
         <element attributes="edge_encryption_enabled=true" label="Work Notes" max_length="4000" name="u_work_notes" type="journal"/>
-        <element attributes="edge_encryption_enabled=true" choice="1" dependent="u_ward_id" dependent_on_field="u_ward_id" label="Room Number" mandatory="true" max_length="40" name="u_room_number" type="string" use_dependent_field="true">
+        <element attributes="edge_encryption_enabled=true" choice="1" dependent="u_ward_id" dependent_on_field="u_ward_id" label="Room Number" max_length="40" name="u_room_number" type="string" use_dependent_field="true">
             <choice/>
         </element>
-        <element attributes="encode_utf8=false" label="Ward_Id" mandatory="true" max_length="32" name="u_ward_id" reference="cmdb_ci_appl_dot_net" type="reference"/>
+        <element attributes="encode_utf8=false" label="Ward_Id" mandatory="true" max_length="32" name="u_ward_id" reference="u_ward" type="reference"/>
         <element label="Occupied Bed" mandatory="true" max_length="40" name="u_occupied_bed" type="integer"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Room Id" max_length="40" name="u_number" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="3" default="new" label="Status" mandatory="true" max_length="40" name="u_status" type="string">
@@ -16,8 +16,12 @@
                 <element inactive_on_update="false" label="New" sequence="0" value="new"/>
             </choice>
         </element>
+        <element attributes="encode_utf8=false" label="Assigned to" max_length="32" name="u_assigned_to" reference="u_patient_record" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="Admin View" max_length="4000" name="u_admin_view" type="journal"/>
         <index name="index">
+            <element name="u_assigned_to"/>
+        </index>
+        <index name="index2">
             <element name="u_ward_id"/>
         </index>
     </element>
